@@ -1,0 +1,19 @@
+numpy==1.24.3
+pandas==1.5.3
+beautifulsoup4==4.12.2
+lxml==4.9.3
+requests==2.31.0
+scipy==1.10.1
+scikit-learn==1.2.2
+joblib==1.2.0
+textstat==0.7.1
+nltk==3.8.1
+tqdm==4.65.0
+
+# Streamlit app dependencies
+streamlit==1.22.0
+plotly==5.14.1
+
+# Optional / bonus (commented — may be large or require extra steps)
+# SentenceTransformers (semantic embeddings). If you want semantic similarity, uncomment and install.
+# sentence-transformers==2.2.2  # may require installing a matching torch package (see README)
