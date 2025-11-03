@@ -6,6 +6,13 @@ import streamlit as st
 import pandas as pd
 import sys
 from pathlib import Path
+import nltk
+
+# Download NLTK data on first run
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
 
 # path setup
 ROOT = Path(__file__).parent.parent
