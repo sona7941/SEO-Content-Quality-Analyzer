@@ -1,0 +1,226 @@
+{
+  "run_info": {
+    "classifier": "StoryWhisperer v1",
+    "approach": "Signal Detection with Context Weighting",
+    "content_weight_multiplier": 3.0,
+    "minimum_threshold": 2.0
+  },
+  "taxonomy": {
+    "Fiction": {
+      "Romance": [
+        "Slow-burn",
+        "Enemies-to-Lovers",
+        "Second Chance"
+      ],
+      "Thriller": [
+        "Espionage",
+        "Psychological",
+        "Legal Thriller"
+      ],
+      "Sci-Fi": [
+        "Hard Sci-Fi",
+        "Space Opera",
+        "Cyberpunk"
+      ],
+      "Horror": [
+        "Psychological Horror",
+        "Gothic",
+        "Slasher"
+      ]
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "input_tags": [
+        "Love"
+      ],
+      "input_blurb": "They hated each other for years, working in the same cubicle, until a late-night deadline changed everything.",
+      "output_category": "Enemies-to-Lovers",
+      "output_path": "Fiction \u2192 Romance \u2192 Enemies-to-Lovers",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Enemies-to-Lovers' based on these signals: context:love, word:hate, word:hated, pattern:hat(?:e|ed)\\s+each\\s+other..., context:changed. The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "context:love",
+        "word:hate",
+        "word:hated",
+        "pattern:hat(?:e|ed)\\s+each\\s+other...",
+        "context:changed"
+      ]
+    },
+    {
+      "id": 2,
+      "input_tags": [
+        "Action",
+        "Spies"
+      ],
+      "input_blurb": "Agent Smith must recover the stolen drive without being detected by the Kremlin.",
+      "output_category": "Espionage",
+      "output_path": "Fiction \u2192 Thriller \u2192 Espionage",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Espionage' based on these signals: word:spies, word:agent, word:kremlin, pattern:without\\s+being\\s+detected..., pattern:(?:stolen|classified)\\s+(?:dri.... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:spies",
+        "word:agent",
+        "word:kremlin",
+        "pattern:without\\s+being\\s+detected...",
+        "pattern:(?:stolen|classified)\\s+(?:dri..."
+      ]
+    },
+    {
+      "id": 3,
+      "input_tags": [
+        "Scary",
+        "House"
+      ],
+      "input_blurb": "The old Victorian mansion seemed to breathe, its corridors whispering secrets of the family's dark past.",
+      "output_category": "Gothic",
+      "output_path": "Fiction \u2192 Horror \u2192 Gothic",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Gothic' based on these signals: word:victorian, word:mansion, word:corridors, pattern:(?:old|ancient|crumbling)\\s+(?..., pattern:whisper(?:ing|ed|s).... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:victorian",
+        "word:mansion",
+        "word:corridors",
+        "pattern:(?:old|ancient|crumbling)\\s+(?...",
+        "pattern:whisper(?:ing|ed|s)..."
+      ]
+    },
+    {
+      "id": 4,
+      "input_tags": [
+        "Love",
+        "Future"
+      ],
+      "input_blurb": "A story about a man who falls in love with his AI operating system in a neon-drenched Tokyo.",
+      "output_category": "Cyberpunk",
+      "output_path": "Fiction \u2192 Sci-Fi \u2192 Cyberpunk",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Cyberpunk' based on these signals: word:neon, word:ai, pattern:neon[-\\s]?(?:lit|drenched|soak..., pattern:ai\\s+(?:system|companion|opera..., context:tokyo. The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:neon",
+        "word:ai",
+        "pattern:neon[-\\s]?(?:lit|drenched|soak...",
+        "pattern:ai\\s+(?:system|companion|opera...",
+        "context:tokyo"
+      ]
+    },
+    {
+      "id": 5,
+      "input_tags": [
+        "Action"
+      ],
+      "input_blurb": "The lawyer stood before the judge, knowing this cross-examination would decide the fate of the city.",
+      "output_category": "Legal Thriller",
+      "output_path": "Fiction \u2192 Thriller \u2192 Legal Thriller",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Legal Thriller' based on these signals: word:lawyer, word:judge, pattern:cross-examination..., pattern:before\\s+the\\s+(?:judge|jury|c.... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:lawyer",
+        "word:judge",
+        "pattern:cross-examination...",
+        "pattern:before\\s+the\\s+(?:judge|jury|c..."
+      ]
+    },
+    {
+      "id": 6,
+      "input_tags": [
+        "Space"
+      ],
+      "input_blurb": "How to build a telescope in your backyard using basic household items.",
+      "output_category": "[UNMAPPED]",
+      "output_path": "N/A - Not Fiction",
+      "confidence": 0.85,
+      "reasoning": "This appears to be instructional/non-fiction content. The taxonomy only covers fiction genres, so I'm flagging this as unmappable rather than forcing a bad fit.",
+      "runner_up": null,
+      "signals_detected": [
+        "Detected non-fiction patterns (how-to, recipe, tutorial)"
+      ]
+    },
+    {
+      "id": 7,
+      "input_tags": [
+        "Sad",
+        "Love"
+      ],
+      "input_blurb": "They met again 20 years after the war, both gray-haired, wondering what could have been.",
+      "output_category": "Second Chance",
+      "output_path": "Fiction \u2192 Romance \u2192 Second Chance",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Second Chance' based on these signals: word:again, pattern:met\\s+again..., pattern:\\d+\\s+years?\\s+(?:later|after)..., pattern:what\\s+could\\s+have\\s+been..., pattern:gray[-\\s]?hair.... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:again",
+        "pattern:met\\s+again...",
+        "pattern:\\d+\\s+years?\\s+(?:later|after)...",
+        "pattern:what\\s+could\\s+have\\s+been...",
+        "pattern:gray[-\\s]?hair..."
+      ]
+    },
+    {
+      "id": 8,
+      "input_tags": [
+        "Robots"
+      ],
+      "input_blurb": "A deep dive into the physics of FTL travel and the metabolic needs of long-term stasis.",
+      "output_category": "Hard Sci-Fi",
+      "output_path": "Fiction \u2192 Sci-Fi \u2192 Hard Sci-Fi",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Hard Sci-Fi' based on these signals: word:physics, word:ftl, word:metabolic, word:stasis, pattern:(?:physics|science)\\s+of.... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:physics",
+        "word:ftl",
+        "word:metabolic",
+        "word:stasis",
+        "pattern:(?:physics|science)\\s+of..."
+      ]
+    },
+    {
+      "id": 9,
+      "input_tags": [
+        "Ghost"
+      ],
+      "input_blurb": "A masked killer stalks a group of teenagers at a summer camp.",
+      "output_category": "Slasher",
+      "output_path": "Fiction \u2192 Horror \u2192 Slasher",
+      "confidence": 0.95,
+      "reasoning": "Matched 'Slasher' based on these signals: word:killer, word:masked, word:stalk, pattern:masked\\s+killer..., pattern:stalk(?:s|ed|ing)\\s+(?:a\\s+)?(.... The story content overruled the generic user tags (this is by design).",
+      "runner_up": null,
+      "signals_detected": [
+        "word:killer",
+        "word:masked",
+        "word:stalk",
+        "pattern:masked\\s+killer...",
+        "pattern:stalk(?:s|ed|ing)\\s+(?:a\\s+)?(..."
+      ]
+    },
+    {
+      "id": 10,
+      "input_tags": [
+        "Recipe",
+        "Sweet"
+      ],
+      "input_blurb": "Mix two cups of flour with sugar and bake at 350 degrees.",
+      "output_category": "[UNMAPPED]",
+      "output_path": "N/A - Not Fiction",
+      "confidence": 0.85,
+      "reasoning": "This appears to be instructional/non-fiction content. The taxonomy only covers fiction genres, so I'm flagging this as unmappable rather than forcing a bad fit.",
+      "runner_up": null,
+      "signals_detected": [
+        "Detected non-fiction patterns (how-to, recipe, tutorial)"
+      ]
+    }
+  ],
+  "summary": {
+    "total_processed": 10,
+    "successfully_mapped": 8,
+    "marked_unmapped": 2,
+    "had_runner_up": 0
+  }
+}
